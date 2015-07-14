@@ -4,15 +4,15 @@
  * (c) Spryker Systems GmbH copyright protected
  */
 
-namespace SprykerFeature\Yves\Price\Plugin;
+namespace SprykerFeature\Yves\Price\Communication\Plugin;
 
 use SprykerFeature\Shared\Library\Currency\CurrencyManager;
 use Silex\Application;
-use SprykerEngine\Yves\Kernel\AbstractPlugin;
+use SprykerEngine\Yves\Kernel\Communication\AbstractPlugin;
 use SprykerFeature\Yves\Twig\Dependency\Plugin\TwigFilterPluginInterface;
 use SprykerFeature\Yves\Twig\Dependency\Plugin\TwigFunctionPluginInterface;
 
-class TwigPricePlugin extends AbstractPlugin implements TwigFilterPluginInterface, TwigFunctionPluginInterface
+class TwigPrice extends AbstractPlugin implements TwigFilterPluginInterface, TwigFunctionPluginInterface
 {
 
     /**
