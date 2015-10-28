@@ -5,10 +5,10 @@
 
 namespace SprykerFeature\Zed\Price\Persistence\Propel;
 
-use SprykerFeature\Zed\Price\Persistence\Propel\Base\SpyPriceProduct as BaseSpyPriceProduct;
+use Orm\Zed\Price\Persistence\Base\SpyPriceProductQuery as BaseSpyPriceProductQuery;
 
 /**
- * Skeleton subclass for representing a row from the 'spy_price_product' table.
+ * Skeleton subclass for performing query and update operations on the 'spy_price_product' table.
  *
  *
  *
@@ -17,7 +17,7 @@ use SprykerFeature\Zed\Price\Persistence\Propel\Base\SpyPriceProduct as BaseSpyP
  * long as it does not already exist in the output directory.
  *
  */
-class SpyPriceProduct extends BaseSpyPriceProduct
+abstract class AbstractSpyPriceProductQuery extends BaseSpyPriceProductQuery
 {
 
-}
+} // SpyPriceProductQuery
