@@ -8,21 +8,20 @@
 namespace Spryker\Zed\Price\Communication\Plugin\Twig;
 
 use Spryker\Shared\Library\Currency\CurrencyManager;
+use Spryker\Shared\Twig\TwigExtension;
+use Spryker\Shared\Twig\TwigFilter;
 use Spryker\Zed\Price\Communication\Plugin\Twig\Filters\PriceFilter;
 
-/**
- * @deprecated Use PriceTwigExtension class instead.
- */
-class PriceTwigExtensions extends \Twig_Extension
+class PriceTwigExtension extends TwigExtension
 {
 
     /**
-     * @return array
+     * @return \Spryker\Shared\Twig\TwigFilter[]
      */
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('currency', function ($price) {
+            new TwigFilter('currency', function ($price) {
                 $currencyManager = CurrencyManager::getInstance();
                 $priceFilter = new PriceFilter($currencyManager);
 
