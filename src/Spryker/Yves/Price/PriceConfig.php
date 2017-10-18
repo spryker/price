@@ -1,19 +1,17 @@
 <?php
-
 /**
- * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Copyright © 2017-present Spryker Systems GmbH. All rights reserved.
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Zed\Price;
+namespace Spryker\Yves\Price;
 
-use Spryker\Shared\Config\Config;
-use Spryker\Shared\Price\PriceMode;
-use Spryker\Zed\Kernel\AbstractBundleConfig;
+use Spryker\Yves\Kernel\AbstractBundleConfig;
 use Spryker\Shared\Price\PriceConfig as SharedPriceConfig;
 
 class PriceConfig extends AbstractBundleConfig
 {
+
     /**
      * @return \Spryker\Shared\Price\PriceConfig
      */
@@ -21,4 +19,5 @@ class PriceConfig extends AbstractBundleConfig
     {
         return new SharedPriceConfig();
     }
+
 }
