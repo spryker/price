@@ -4,25 +4,31 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Yves\Price\Plugin;
+namespace Spryker\Client\Price;
 
 /**
- * @method \Spryker\Yves\Price\PriceFactory getFactory()
- * @method \Spryker\Yves\Price\PriceConfig getConfig()
+ * @method \Spryker\Client\Price\PriceFactory getFactory()
+ * @method \Spryker\Client\Price\PriceConfig getConfig()
  */
-interface PriceModePluginInterface
+interface PriceClientInterface
 {
     /**
+     * @api
+     *
      * @return string
      */
     public function getCurrentPriceMode();
 
     /**
+     * @api
+     *
      * @return string
      */
     public function getGrossPriceModeIdentifier();
 
     /**
+     * @api
+     *
      * @return string
      */
     public function getNetPriceModeIdentifier();
