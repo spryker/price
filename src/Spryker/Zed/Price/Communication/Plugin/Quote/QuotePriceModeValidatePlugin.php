@@ -21,7 +21,7 @@ class QuotePriceModeValidatePlugin extends AbstractPlugin implements QuoteValida
 {
     /**
      * {@inheritdoc}
-     * - Validates if provided quote price mode is available.
+     * - Validates if provided price mode in quote is available.
      *
      * @api
      *
