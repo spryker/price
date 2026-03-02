@@ -14,35 +14,21 @@ class PriceModeCache implements PriceModeCacheInterface
      */
     protected static $priceModeCache;
 
-    /**
-     * @return bool
-     */
     public function isCached(): bool
     {
         return (bool)static::$priceModeCache;
     }
 
-    /**
-     * @return string
-     */
     public function get(): string
     {
         return static::$priceModeCache;
     }
 
-    /**
-     * @param string $priceMode
-     *
-     * @return void
-     */
     public function cache(string $priceMode): void
     {
         static::$priceModeCache = $priceMode;
     }
 
-    /**
-     * @return void
-     */
     public function invalidate(): void
     {
         static::$priceModeCache = null;

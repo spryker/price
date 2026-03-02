@@ -29,9 +29,6 @@ class PriceClientTester extends Actor
 {
     use _generated\PriceClientTesterActions;
 
-    /**
-     * @return \Spryker\Client\Price\PriceModeCache\PriceModeCacheInterface
-     */
     public function createPriceModeCache(): PriceModeCacheInterface
     {
         return new PriceModeCache();

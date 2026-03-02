@@ -59,11 +59,6 @@ class PriceDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addPriceModePostUpdatePlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_PRICE_MODE_POST_UPDATE, function (Container $container) {
@@ -73,11 +68,6 @@ class PriceDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addCurrentPriceModePreCheckPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_CURRENT_PRICE_MODE_PRE_CHECK, function () {

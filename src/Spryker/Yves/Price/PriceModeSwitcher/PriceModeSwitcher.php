@@ -23,10 +23,6 @@ class PriceModeSwitcher implements PriceModeSwitcherInterface
      */
     protected $priceConfig;
 
-    /**
-     * @param \Spryker\Yves\Price\Dependency\Client\PriceToQuoteClientInterface $quoteClient
-     * @param \Spryker\Yves\Price\PriceConfig $priceConfig
-     */
     public function __construct(PriceToQuoteClientInterface $quoteClient, PriceConfig $priceConfig)
     {
         $this->quoteClient = $quoteClient;

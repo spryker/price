@@ -28,11 +28,6 @@ class PriceModeResolver implements PriceModeResolverInterface
      */
     protected $priceModeCache;
 
-    /**
-     * @param \Spryker\Client\Price\Dependency\Client\PriceToQuoteClientInterface $quoteClient
-     * @param \Spryker\Client\Price\PriceConfig $priceConfig
-     * @param \Spryker\Client\Price\PriceModeCache\PriceModeCacheInterface $priceModeCache
-     */
     public function __construct(
         PriceToQuoteClientInterface $quoteClient,
         PriceConfig $priceConfig,

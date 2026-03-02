@@ -34,19 +34,11 @@ class QuoteValidator implements QuoteValidatorInterface
      */
     protected $priceConfig;
 
-    /**
-     * @param \Spryker\Zed\Price\PriceConfig $priceConfig
-     */
     public function __construct(PriceConfig $priceConfig)
     {
         $this->priceConfig = $priceConfig;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteValidationResponseTransfer
-     */
     public function validate(QuoteTransfer $quoteTransfer): QuoteValidationResponseTransfer
     {
         $priceMode = $quoteTransfer->getPriceMode();
@@ -70,13 +62,6 @@ class QuoteValidator implements QuoteValidatorInterface
         return $quoteValidationResponseTransfer->setIsSuccessful(true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteValidationResponseTransfer $quoteValidationResponseTransfer
-     * @param string $errorMessage
-     * @param array $parameters
-     *
-     * @return \Generated\Shared\Transfer\QuoteValidationResponseTransfer
-     */
     protected function addValidationError(
         QuoteValidationResponseTransfer $quoteValidationResponseTransfer,
         string $errorMessage,

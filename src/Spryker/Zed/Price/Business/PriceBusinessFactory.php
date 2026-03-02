@@ -27,9 +27,6 @@ class PriceBusinessFactory extends AbstractBusinessFactory
         return $config;
     }
 
-    /**
-     * @return \Spryker\Zed\Price\Business\Validator\QuoteValidatorInterface
-     */
     public function createQuoteValidator(): QuoteValidatorInterface
     {
         return new QuoteValidator($this->getModuleConfig());

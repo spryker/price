@@ -27,9 +27,6 @@ class PriceFactory extends AbstractFactory
         return new PriceModeResolver($this->getQuoteClient(), $this->getConfig(), $this->createPriceModeCache());
     }
 
-    /**
-     * @return \Spryker\Client\Price\PriceModeSwitcher\PriceModeSwitcherInterface
-     */
     public function createPriceModeSwitcher(): PriceModeSwitcherInterface
     {
         return new PriceModeSwitcher(
@@ -41,9 +38,6 @@ class PriceFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\Price\PriceModeCache\PriceModeCacheInterface
-     */
     public function createPriceModeCache(): PriceModeCacheInterface
     {
         return new PriceModeCache();

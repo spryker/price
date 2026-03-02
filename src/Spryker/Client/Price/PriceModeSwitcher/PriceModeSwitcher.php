@@ -90,11 +90,6 @@ class PriceModeSwitcher implements PriceModeSwitcherInterface
         $this->priceModeCache->cache($priceMode);
     }
 
-    /**
-     * @param string $priceMode
-     *
-     * @return void
-     */
     protected function executePriceModePostUpdatePlugins(string $priceMode): void
     {
         foreach ($this->priceModePostUpdatePlugins as $priceModePostUpdatePlugin) {
@@ -102,12 +97,6 @@ class PriceModeSwitcher implements PriceModeSwitcherInterface
         }
     }
 
-    /**
-     * @param string $priceMode
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     protected function executeCurrentPriceModePreCheckPlugins(string $priceMode, QuoteTransfer $quoteTransfer): bool
     {
         foreach ($this->currentPriceModePreCheckPlugins as $currentPriceModePreCheckPlugin) {

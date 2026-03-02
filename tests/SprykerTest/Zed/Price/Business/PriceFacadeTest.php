@@ -49,9 +49,6 @@ class PriceFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testValidateWrongPriceModeInQuote(): void
     {
         $quoteTransfer = (new QuoteTransfer())
@@ -67,9 +64,6 @@ class PriceFacadeTest extends Unit
         $this->assertContains(static::ERROR_MESSAGE_PRICE_MODE_DATA_IS_INCORRECT, $errors);
     }
 
-    /**
-     * @return void
-     */
     public function testValidateCorrectPriceModeInQuote(): void
     {
         $quoteTransfer = (new QuoteTransfer())
@@ -81,11 +75,6 @@ class PriceFacadeTest extends Unit
         $this->assertEmpty($quoteValidationResponseTransfer->getErrors());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteValidationResponseTransfer
-     */
     protected function getQuoteValidationResponseTransfer(QuoteTransfer $quoteTransfer): QuoteValidationResponseTransfer
     {
         /** @var \Spryker\Zed\Price\Business\PriceFacade $priceFacade */

@@ -49,9 +49,6 @@ class PriceClientTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -63,18 +60,12 @@ class PriceClientTest extends Unit
         ]);
     }
 
-    /**
-     * @return void
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
         $this->tester->createPriceModeCache()->invalidate();
     }
 
-    /**
-     * @return void
-     */
     public function testGetCurrentPriceModeReturnsDefaultPriceMode(): void
     {
         //Arrange
@@ -87,9 +78,6 @@ class PriceClientTest extends Unit
         $this->assertSame($this->createPriceConfig()->getDefaultPriceMode(), $priceMode);
     }
 
-    /**
-     * @return void
-     */
     public function testGetCurrentPriceModeReturnsCachedPriceMode(): void
     {
         //Arrange
@@ -103,9 +91,6 @@ class PriceClientTest extends Unit
         $this->assertSame(static::CACHED_PRICE_MODE, $priceMode);
     }
 
-    /**
-     * @return void
-     */
     public function testSwitchPriceModeSwitchPriceModeInCache(): void
     {
         //Arrange
@@ -122,9 +107,6 @@ class PriceClientTest extends Unit
         $this->assertSame($defaultPriceMode, $priceModeCache);
     }
 
-    /**
-     * @return void
-     */
     public function testSwitchPriceModeExecutesCurrentPriceModePreCheckPlugins(): void
     {
         // Arrange
@@ -137,17 +119,11 @@ class PriceClientTest extends Unit
         $this->tester->getLocator()->price()->client()->switchPriceMode($defaultPriceMode);
     }
 
-    /**
-     * @return \Spryker\Client\Price\PriceConfig
-     */
     protected function createPriceConfig(): PriceConfig
     {
         return new PriceConfig();
     }
 
-    /**
-     * @return void
-     */
     protected function setupSession(): void
     {
         $sessionContainer = new Session(new MockArraySessionStorage());
@@ -155,9 +131,6 @@ class PriceClientTest extends Unit
         $sessionClient->setContainer($sessionContainer);
     }
 
-    /**
-     * @return \Spryker\Client\StoreExtension\Dependency\Plugin\StoreExpanderPluginInterface
-     */
     protected function createStoreStorageStoreExpanderPluginMock(): StoreExpanderPluginInterface
     {
         $storeStorageStoreExpanderPluginMock = $this->createMock(StoreExpanderPluginInterface::class);
@@ -169,9 +142,6 @@ class PriceClientTest extends Unit
         return $storeStorageStoreExpanderPluginMock;
     }
 
-    /**
-     * @return \Spryker\Client\PriceExtension\Dependency\Plugin\CurrentPriceModePreCheckPluginInterface
-     */
     protected function getCurrentPriceModePreCheckPluginMock(): CurrentPriceModePreCheckPluginInterface
     {
         $currentPriceModePreCheckPluginMock = $this->getMockBuilder(CurrentPriceModePreCheckPluginInterface::class)
